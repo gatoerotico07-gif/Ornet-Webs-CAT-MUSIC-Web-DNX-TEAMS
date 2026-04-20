@@ -4,12 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cat Music Bot</title><!-- SOCIAL EMBED META TAGS --><meta property="og:title" content="Cat Music - Discord Bot">
 <meta property="og:description" content="Bot activo 24/7 con música inteligente, radio automática y recomendaciones con IA.">
-<meta property="og:image" content="https://TU-DOMINIO.com/static/Banner.png">
-<meta property="og:url" content="https://TU-DOMINIO.com">
+<meta property="og:image" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/Banner.png">
+<meta property="og:url" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/">
 <meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cat Music - Discord Bot">
 <meta name="twitter:description" content="Bot activo 24/7 con música inteligente y sistema IA-recommend.">
-<meta name="twitter:image" content="https://TU-DOMINIO.com/static/Banner.png"><!-- Google Font --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"><style>
+<meta name="twitter:image" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/Banner.png"><!-- Google Font --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"><style>
 
 /* ==========================
 GLOBAL STYLE
@@ -34,7 +34,6 @@ h1,h2,h3,p {
         opacity: 1;
         transform: translateY(0);
     }
-}
 
 /* ==========================
 BANNER BACKGROUND
@@ -52,6 +51,9 @@ CAMBIA ESTA URL
 
     background-image: url("Banner.png");
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     position: relative;
 }
@@ -65,14 +67,17 @@ CAMBIA ESTA URL
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 800px; /* evita que el contenido se vea saturado */
+    z-index: 3;
+    max-width: 600px;
     margin: auto;
-    padding: 40px; /* separa del borde visualmente */
-    background: rgba(0,0,0,0.35); /* efecto glass suave */
-    border-radius: 30px;
-    backdrop-filter: blur(8px);
-}
+    padding: 60px 40px; /* separacion real del banner */
+    background: rgba(0,0,0,0.55);
+    border-radius: 40px;
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.7),
+        0 0 80px rgba(34,197,94,0.25);
 }
 
 /* ==========================
@@ -84,26 +89,30 @@ CAMBIA ESTA URL
     width: 170px;
     height: 170px;
     border-radius: 50%;
+
     background-image: url("cat.png");
     background-size: cover;
     background-position: center;
 
+    border: 4px solid rgba(255,255,255,0.25);
+
     box-shadow:
-        0 0 20px #22c55e,
-        0 0 60px #22c55e;
+        0 0 25px #22c55e,
+        0 0 70px rgba(34,197,94,0.45);
 
     animation:
         float 4s ease-in-out infinite,
         magicAppear 2s forwards;
 
-    margin: auto;
+    margin: 0 auto 25px auto;
+    position: relative;
+    z-index: 5;
 }
 
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-25px); }
     100% { transform: translateY(0px); }
-}
 
 /* ==========================
 BUTTONS
@@ -236,8 +245,6 @@ if(top<window.innerHeight-100){
 
 card.style.opacity="1";
 card.style.transform="translateY(0px)";
-
-}
 
 });
 
