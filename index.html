@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cat Music Bot</title>
-
-<!-- SOCIAL EMBED META TAGS -->
-<meta property="og:title" content="Cat Music - Discord Bot">
+<title>Cat Music Bot</title><!-- SOCIAL EMBED META TAGS --><meta property="og:title" content="Cat Music - Discord Bot">
 <meta property="og:description" content="Bot activo 24/7 con música inteligente, radio automática y recomendaciones con IA.">
 <meta property="og:image" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/Banner.png">
 <meta property="og:url" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cat Music - Discord Bot">
 <meta name="twitter:description" content="Bot activo 24/7 con música inteligente y sistema IA-recommend.">
-<meta name="twitter:image" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/Banner.png">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<style>
+<meta name="twitter:image" content="https://gatoerotico07-gif.github.io/Ornet-Webs-CAT-MUSIC-Web-DNX-TEAMS/Banner.png"><!-- Google Font --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"><style>
 
 /* ==========================
 GLOBAL STYLE
@@ -48,24 +37,21 @@ h1,h2,h3,p {
 
 /* ==========================
 BANNER BACKGROUND
-CAMBIA ESTA URL
 ========================== */
 
 .hero {
     min-height: 100vh;
-    padding: 120px 20px; /* espacio extra arriba y abajo */
+    padding: 180px 20px; /* separación superior real */
+
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
 
     background-image: url("Banner.png");
     background-size: cover;
-    background-position: center center;
+    background-position: center 30%; /* mueve el banner más arriba visualmente */
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
     position: relative;
 }
 
@@ -73,32 +59,32 @@ CAMBIA ESTA URL
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.55);
 }
 
 .hero-content {
     position: relative;
     z-index: 3;
-    max-width: 600px;
-    margin: auto;
-    padding: 60px 40px; /* separacion real del banner */
-    background: rgba(0,0,0,0.55);
-    border-radius: 40px;
-    backdrop-filter: blur(12px);
 
-    box-shadow:
-        0 0 40px rgba(0,0,0,0.7),
-        0 0 80px rgba(34,197,94,0.25);
+    max-width: 520px;
+    padding: 50px 35px;
+
+    background: rgba(0,0,0,0.45);
+    border-radius: 30px;
+
+    backdrop-filter: blur(10px);
+
+    margin-top: 40px;
 }
 
 /* ==========================
-FLOATING MAGIC BUBBLE
-CAMBIA ESTA URL
+FLOATING AVATAR
 ========================== */
 
 .floating-avatar {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
+
     border-radius: 50%;
 
     background-image: url("cat.png");
@@ -109,19 +95,18 @@ CAMBIA ESTA URL
 
     box-shadow:
         0 0 25px #22c55e,
-        0 0 70px rgba(34,197,94,0.45);
+        0 0 60px rgba(34,197,94,0.35);
 
-    animation:
-        float 4s ease-in-out infinite,
-        magicAppear 2s forwards;
+    animation: float 4s ease-in-out infinite;
 
     margin: 0 auto 25px auto;
-    position: relative;
-    z-index: 5;
 }
 
 @keyframes float {
     0% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+    100% { transform: translateY(0px); }
+}
     50% { transform: translateY(-25px); }
     100% { transform: translateY(0px); }
 
@@ -197,107 +182,50 @@ footer {
     opacity: .5;
 }
 
-</style>
-</head>
-<body>
-
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="floating-avatar"></div>
-
-<h1 style="animation-delay:.5s">
+</style></head>
+<body><section class="hero"><div class="hero-content"><div class="floating-avatar"></div><h1 style="animation-delay:.5s">
 Cat Music Bot
-</h1>
-
-<p style="animation-delay:1s">
+</h1><p style="animation-delay:1s">
 El mejor bot musical inteligente para Discord
-</p>
-
-<div class="buttons">
-
-<button class="invite"
-onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1492261881400786994&permissions=8&integration_type=0&scope=bot+applications.commands'">
-Invitar Bot
-</button>
+</p><div class="buttons"><button class="invite"
+onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1492261881400786994&permissions=8&integration_type=0&scope=bot+applications.commands'"> Invitar Bot </button>
 
 <button class="support"
-onclick="window.location.href='https://discord.gg/CckTXwkWEJ'">
-Soporte
-</button>
+onclick="window.location.href='https://discord.gg/CckTXwkWEJ'"> Soporte </button>
 
-</div>
-
-</div>
-</section>
-
-
-<section class="commands">
-
-<h2 style="text-align:center;margin-bottom:60px">
+</div></div>
+</section><section class="commands"><h2 style="text-align:center;margin-bottom:60px">
 Comandos principales
-</h2>
-
-<div class="command-grid">
-
-<div class="card">
+</h2><div class="command-grid"><div class="card">
 <h3>.play</h3>
-<p>Reproduce música desde SounCloud enlaces compatibles</p>
-</div>
-
-<div class="card">
+<p>Reproduce música desde YouTube o enlaces compatibles</p>
+</div><div class="card">
 <h3>/pause</h3>
 <p>Pausa la canción actual</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>/resume</h3>
 <p>Reanuda la reproducción pausada</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>/stop</h3>
 <p>Desconecta el bot y termina la música</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>.skip</h3>
 <p>Salta a la siguiente canción</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>.queue</h3>
 <p>Muestra la cola musical</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>.vol</h3>
 <p>Ajusta el volumen</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>/radio</h3>
 <p>Activa radio 24/7 automática</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>/ia-recommend</h3>
 <p>IA recomienda canciones según la vibra actual</p>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
+</div></div></section><footer>
 Cat Music Bot © 2026
-</footer>
-
-
-<script>
+</footer><script>
 
 // EFECTO MAGICO EXTRA
 
@@ -318,15 +246,10 @@ card.style.transform="translateY(0px)";
 
 });
 
-</script>
-
-
-<!-- ==============================
+</script><!-- ==============================
 PYTHON BACKEND OPCIONAL (FLASK)
 GUARDAR COMO: server.py
-============================== -->
-
-<!--
+============================== --><!--
 
 from flask import Flask, render_template
 
@@ -340,8 +263,5 @@ def home():
 if __name__ == "__main__":
     app.run(debug=True)
 
--->
-
-
-</body>
-</html>
+--></body>
+    </html>
