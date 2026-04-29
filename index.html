@@ -1,8 +1,25 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cat Music Bot</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+<title>Cat Music Bot</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- EMBED -->
+<meta property="og:title" content="Cat Music Bot">
+<meta property="og:description" content="Tu compañero musical inteligente 24/7 con IA integrada">
+<meta property="og:image" content="https://TU-DOMINIO.com/Banner.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://TU-DOMINIO.com">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cat Music Bot">
+<meta name="twitter:description" content="Tu compañero musical inteligente 24/7 con IA integrada">
+<meta name="twitter:image" content="https://TU-DOMINIO.com/Banner.png">
+
+<style>
 *{
 margin:0;
 padding:0;
@@ -16,7 +33,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* Banner fondo */
+/* Fondo */
 .banner{
 position:fixed;
 top:0;
@@ -28,7 +45,6 @@ filter:blur(6px) brightness(0.4);
 z-index:-2;
 }
 
-/* Glow overlay */
 .overlay{
 position:fixed;
 width:100%;
@@ -37,11 +53,19 @@ background:radial-gradient(circle at center,#6a00ff22,transparent);
 z-index:-1;
 }
 
-/* Burbuja flotante */
+/* Título */
+header{
+text-align:center;
+margin-top:60px;
+animation:fadeUp 2s ease forwards;
+opacity:0;
+}
+
+/* Burbuja */
 .profile-bubble{
 position:relative;
 margin:auto;
-top:120px;
+margin-top:40px;
 width:220px;
 height:220px;
 border-radius:50%;
@@ -58,45 +82,21 @@ height:100%;
 border-radius:50%;
 }
 
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-18px)}
-100%{transform:translateY(0)}
-}
-
-@keyframes appear{
-from{opacity:0;transform:scale(.4)}
-to{opacity:1;transform:scale(1)}
-}
-
-header{
+/* Texto chico debajo */
+.small-tagline{
 text-align:center;
-margin-top:180px;
+font-size:0.9rem;
+opacity:.7;
+margin-top:20px;
 animation:fadeUp 2s ease forwards;
 opacity:0;
 animation-delay:.6s;
 }
 
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(60px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-h1{
-font-size:3.5rem;
-margin-bottom:10px;
-background:linear-gradient(90deg,#7b2cff,#00ffe1);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.tagline{
-font-size:1.3rem;
-opacity:.8;
-}
-
+/* Botones */
 .buttons{
-margin-top:35px;
+text-align:center;
+margin-top:25px;
 }
 
 .btn{
@@ -125,6 +125,7 @@ box-shadow:0 0 20px #00c96b99;
 transform:scale(1.08);
 }
 
+/* Comandos */
 .commands{
 margin-top:120px;
 padding:50px;
@@ -132,8 +133,8 @@ max-width:900px;
 margin-left:auto;
 margin-right:auto;
 animation:fadeUp 2s ease forwards;
-animation-delay:1s;
 opacity:0;
+animation-delay:1s;
 }
 
 .commands h2{
@@ -142,29 +143,47 @@ margin-bottom:30px;
 font-size:2.3rem;
 }
 
+/* Tarjetas */
 .command{
 background:#ffffff08;
-padding:30px;
+padding:25px;
 margin:18px 0;
 border-radius:18px;
 backdrop-filter:blur(14px);
 transition:.3s;
-font-size:1.2rem;
-min-height:70px;
-display:flex;
-align-items:center;
 }
 
 .command:hover{
 background:#ffffff15;
-transform:translateX(8px);
+transform:scale(1.03);
 }
 
-footer{
-text-align:center;
-padding:40px;
-opacity:.6;
-font-size:.9rem;
+.cmd-title{
+font-size:1.3rem;
+font-weight:600;
+margin-bottom:8px;
+}
+
+.cmd-desc{
+font-size:0.95rem;
+opacity:.7;
+}
+
+/* Animaciones */
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-18px)}
+100%{transform:translateY(0)}
+}
+
+@keyframes appear{
+from{opacity:0;transform:scale(.4)}
+to{opacity:1;transform:scale(1)}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(60px)}
+to{opacity:1;transform:translateY(0)}
 }
 
 .magic-text{
@@ -177,28 +196,97 @@ from{opacity:0;letter-spacing:10px}
 to{opacity:1;letter-spacing:normal}
 }
 
-</style></head>
-<body><div class="banner"></div>
-<div class="overlay"></div><div class="profile-bubble">
-<img src="cat-profile.png">
-</div><header>
+footer{
+text-align:center;
+padding:40px;
+opacity:.6;
+font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner"></div>
+<div class="overlay"></div>
+
+<!-- TÍTULO ARRIBA -->
+<header>
 <h1 class="magic-text">🐱 Cat Music Bot</h1>
-<p class="tagline magic-text">Tu compañero musical inteligente 24/7 con IA integrada</p><div class="buttons">
+</header>
+
+<!-- FOTO -->
+<div class="profile-bubble">
+<img src="cat-profile.png">
+</div>
+
+<!-- TEXTO ABAJO -->
+<p class="small-tagline magic-text">
+Tu compañero musical inteligente 24/7 con IA integrada
+</p>
+
+<!-- BOTONES -->
+<div class="buttons">
 <button class="btn invite" onclick="inviteBot()">Invitar Bot</button>
 <button class="btn support" onclick="supportServer()">Soporte</button>
-</div></header><section class="commands">
-<h2>🎵 Comandos disponibles</h2><div class="command">.play → Reproduce música</div>
-<div class="command">/pause → Pausa la música</div>
-<div class="command">/resume → Reanuda la música</div>
-<div class="command">/stop → Desconecta el bot del canal</div>
-<div class="command">.skip → Salta la canción actual</div>
-<div class="command">.queue → Muestra la lista de canciones</div>
-<div class="command">.vol → Ajusta el volumen</div>
-<div class="command">/radio → Activa radio 24/7</div>
-<div class="command">/ia-recommend → IA recomienda canciones según la vibra</div></section><footer>
-Cat Music Bot © 2026
-</footer><script>
+</div>
 
+<!-- COMANDOS -->
+<section class="commands">
+<h2>🎵 Comandos disponibles</h2>
+
+<div class="command">
+<div class="cmd-title">▶️ /play</div>
+<div class="cmd-desc">Reproduce música desde cualquier fuente</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">⏸️ /pause</div>
+<div class="cmd-desc">Pausa la música actual</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">▶️ /resume</div>
+<div class="cmd-desc">Reanuda la reproducción</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">⏹️ /stop</div>
+<div class="cmd-desc">Detiene el bot y lo desconecta</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">⏭️ /skip</div>
+<div class="cmd-desc">Salta la canción actual</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">📜 /queue</div>
+<div class="cmd-desc">Muestra la lista de reproducción</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">🔊 /vol</div>
+<div class="cmd-desc">Ajusta el volumen</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">📻 /radio</div>
+<div class="cmd-desc">Activa música 24/7 automáticamente</div>
+</div>
+
+<div class="command">
+<div class="cmd-title">🤖 /ia-recommend</div>
+<div class="cmd-desc">Recomendaciones inteligentes según tu vibra</div>
+</div>
+
+</section>
+
+<footer>
+Cat Music Bot © 2026
+</footer>
+
+<script>
 function inviteBot(){
 window.location.href="https://discord.com/oauth2/authorize?client_id=1492261881400786994&permissions=8&integration_type=0&scope=bot+applications.commands";
 }
@@ -206,8 +294,6 @@ window.location.href="https://discord.com/oauth2/authorize?client_id=14922618814
 function supportServer(){
 window.location.href="https://discord.gg/CckTXwkWEJ";
 }
-
-// aparición mágica secuencial
 
 window.addEventListener("load",()=>{
 let texts=document.querySelectorAll(".magic-text");
@@ -217,6 +303,7 @@ el.style.opacity=1;
 },600*i);
 });
 });
+</script>
 
-</script></body>
+</body>
     </html>
